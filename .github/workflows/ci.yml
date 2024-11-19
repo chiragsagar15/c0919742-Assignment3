@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.10'  # Use the appropriate Python version for your project
 
       # Install dependencies
       - name: Install dependencies
@@ -29,10 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Run tests
+      # Run tests with MongoDB credentials from secrets
       - name: Run tests
         env:
           MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
           MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
         run: |
-          pytest --maxfail=5 --disable-warnings
+          pytest tests/ --disable-warnings
