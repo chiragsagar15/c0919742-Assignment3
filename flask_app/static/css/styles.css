@@ -1,0 +1,102 @@
+body {
+    font-family: "Playfair Display", serif;
+    background-color: #c9af98;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #3a4660;
+    padding: 5px;
+}
+
+.navbar {
+    margin: 5px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 2em;
+}
+
+.nav_link {
+    color: #c9af98;
+    font-size: 1.1em;
+    margin-right: 20px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.nav_link:hover {
+    color: #013328;
+    text-decoration: underline;
+    transition: 0.5sec;
+}
+
+main {
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #3a4660;
+    box-shadow: 5px 5px 11px #5c6d90;
+}
+
+.home_para{
+    color: #c98d59;
+    text-align: left;
+    font-size: x-large;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #e3c6ac;
+    text-align: center;
+}
+
+.product_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+}
+
+.product_item {
+    flex: 0 1 calc(25% - 10px);
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product_item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product_item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #432804;
+}
+
+.product_item p {
+    font-size: 1em;
+    color: #432804;
+    font-weight: bold;
+}
+
+.product_item p:last-of-type {
+    color: #ed8a63;
+    font-size: 1.2em;
+    font-weight: bold;
+}

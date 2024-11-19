@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %}E-Commerce Site{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-dark">
+            <div class="container">
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav_item">
+                            <a class="nav_link" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav_link" href="{{ url_for('products') }}">Products</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-6">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
