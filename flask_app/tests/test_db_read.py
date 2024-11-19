@@ -3,10 +3,11 @@ import os
 import time
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from app import connection_string  # Make sure 'connection_string' is defined properly in 'app'
 
 # Add parent directory to sys.path to ensure proper import of 'app'
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 def test_mongodb_connection():
     retries = 3
