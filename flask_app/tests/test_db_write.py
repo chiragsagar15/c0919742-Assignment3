@@ -9,7 +9,7 @@ def test_mongodb_write_operation():
     db = client['shop_db']
     products_collection = db['products']
 
-    test_product = {"name": "Test Watch", "price": 99.99, "tag": "Test Watch"}
+    test_product = {"name": "Test Watch", "price": 99.99, "tag": "Watch Tag"}
     result = products_collection.insert_one(test_product)
 
     inserted_product = products_collection.find_one({"_id": result.inserted_id})
